@@ -10,9 +10,7 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
 
 #install packages
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y update && \
-    apt-get -y install apt-utils && \
-    apt-get -y install curl git mysql-client && \
-    apt-get -y install libjpeg-dev zlib1g-dev libfreetype6-dev libmysqlclient-dev && \
+    apt-get -y install curl git && \
     apt-get -y install build-essential python-dev python-pip python-setuptools python-virtualenv && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*

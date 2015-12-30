@@ -5,10 +5,10 @@
 FROM debian:jessie
 MAINTAINER Nicholas Marus <nmarus@gmail.com>
 
-#setup apt
+# Setup APT
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
-#install packages
+# Update, Install Prerequisites, Clean Up APT
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y update && \
     apt-get -y install curl git && \
     apt-get -y install build-essential python-dev python-pip python-setuptools python-virtualenv && \

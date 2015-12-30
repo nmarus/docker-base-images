@@ -1,3 +1,7 @@
+# nginx-full
+# https://github.com/nmarus/docker-images
+# Nicholas Marus <nmarus@gmail.com>
+
 FROM debian:jessie
 MAINTAINER Nicholas Marus <nmarus@gmail.com>
 
